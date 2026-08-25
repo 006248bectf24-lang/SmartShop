@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Products - SmartShop</title>
+
+    <!-- Existing CSS -->
+    <link
+        rel="stylesheet"
+        href="../css/style.css"
+    >
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav>
+
+        <h2>SmartShop</h2>
+
+        <ul>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="products.html">
+                    Products
+                </a>
+            </li>
+
+            <li>
+                <a href="wishlist.html">
+                    ❤️ Wishlist
+                    (<span id="wishlist-count">0</span>)
+                </a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    Cart 🛒
+                    (<span id="cart-count">0</span>)
+                </a>
+            </li>
+
+            <li>
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <main class="container py-5">
+
+        <h1 class="text-4xl font-bold text-center mb-3">
+            Our Products 🛍️
+        </h1>
+
+        <p class="text-center text-gray-600 mb-4">
+            Explore our latest products.
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <div class="d-flex justify-content-center gap-2 mb-4">
+
+            <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                style="max-width: 400px;"
+                placeholder="Search products..."
+            >
+
+            <button
+                onclick="searchProducts()"
+                class="btn btn-primary"
+            >
+                Search 🔍
+            </button>
+
+        </div>
+
+
+        <!-- CATEGORY -->
+
+        <div class="text-center mb-5">
+
+            <select
+                id="categoryFilter"
+                onchange="filterByCategory()"
+                class="form-select mx-auto"
+                style="max-width: 300px;"
+            >
+
+                <option value="all">
+                    All Categories
+                </option>
+
+                <option value="beauty">
+                    Beauty
+                </option>
+
+                <option value="fragrances">
+                    Fragrances
+                </option>
+
+                <option value="furniture">
+                    Furniture
+                </option>
+
+                <option value="groceries">
+                    Groceries
+                </option>
+
+                <option value="home-decoration">
+                    Home Decoration
+                </option>
+
+                <option value="laptops">
+                    Laptops
+                </option>
+
+                <option value="mens-shirts">
+                    Men's Shirts
+                </option>
+
+                <option value="mens-shoes">
+                    Men's Shoes
+                </option>
+
+                <option value="mens-watches">
+                    Men's Watches
+                </option>
+
+                <option value="mobile-accessories">
+                    Mobile Accessories
+                </option>
+
+                <option value="motorcycle">
+                    Motorcycle
+                </option>
+
+                <option value="skin-care">
+                    Skin Care
+                </option>
+
+                <option value="smartphones">
+                    Smartphones
+                </option>
+
+                <option value="sports-accessories">
+                    Sports Accessories
+                </option>
+
+                <option value="sunglasses">
+                    Sunglasses
+                </option>
+
+                <option value="tablets">
+                    Tablets
+                </option>
+
+                <option value="tops">
+                    Tops
+                </option>
+
+                <option value="vehicle">
+                    Vehicle
+                </option>
+
+                <option value="womens-bags">
+                    Women's Bags
+                </option>
+
+                <option value="womens-dresses">
+                    Women's Dresses
+                </option>
+
+                <option value="womens-jewellery">
+                    Women's Jewellery
+                </option>
+
+                <option value="womens-shoes">
+                    Women's Shoes
+                </option>
+
+                <option value="womens-watches">
+                    Women's Watches
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- PRODUCT CONTAINER -->
+
+        <div
+            id="product-container"
+            class="row g-4"
+        ></div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            SmartShop
+        </h3>
+
+        <p>
+            Your smart destination
+            for online shopping.
+        </p>
+
+        <p>
+            © 2026 SmartShop.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="../js/script.js"></script>
+
+    <script src="../js/wishlist.js"></script>
+
+    <script src="../js/products.js"></script>
+
+
+    <!-- Bootstrap JS -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+</body>
+
+</html>
